@@ -1,7 +1,5 @@
 # DIO-Formacao-JavaScript-Developer
 
-# DIO Formação JavaScript Developer
-
 ## 📚 Sobre
 Este repositório contém os exercícios e projetos desenvolvidos durante a Formação JavaScript Developer da DIO (Digital Innovation One). O curso tem como objetivo aprimorar conhecimentos em JavaScript, desde conceitos básicos até aplicações web avançadas.
 
