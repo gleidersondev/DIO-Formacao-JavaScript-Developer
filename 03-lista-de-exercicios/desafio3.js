@@ -27,12 +27,14 @@ const mediaClassificaçao = (nota1, nota2, nota3) => {
 
 mediaClassificaçao(portugues, matematica, fisica);
 
-// 2) O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar uma indicação sobre a condição de peso de uma pessoa adulta. 
+// 2) O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde 
+// para dar uma indicação sobre a condição de peso de uma pessoa adulta. 
 
 // Formula do IMC:
 // IMC = peso / (altura * altura)
 
-// Elabore um algoritmo que dado o peso e a altura de um adulto mostre sua condição de acordo com a tabela abaixo.
+// Elabore um algoritmo que dado o peso e a altura de um adulto mostre sua condição
+//  de acordo com a tabela abaixo.
 
 // IMC em adultos Condição:
 // - Abaixo de 18.5 Abaixo do peso;
@@ -40,6 +42,28 @@ mediaClassificaçao(portugues, matematica, fisica);
 // - Entre 25 e 30 Acima do peso;
 // - Entre 30 e 40 Obeso;
 // - Acima de 40 Obsesidade Grave;
+
+const peso = 73
+const altura = 1.72;
+
+const condicao = (kg, al) => {
+  const resultado = kg / (al * al);
+
+  if (resultado < 18.5) {
+    console.log('Sua condição é ABAIXO DO PESO');
+  } else if (resultado > 18.5 && resultado < 25) {
+    console.log('Sua condição é PESO NORMAL');
+  } else if (resultado > 25 && resultado < 30) {
+    console.log('Sua condição é ACIMA DO PESO');
+  } else if (resultado > 30 && resultado < 40) {
+    console.log('Sua condição é OBESO');
+  } else {
+    console.log('Sua condição é OBESIDADE GRAVE');    
+  }
+};
+
+condicao(peso, altura);
+
 
 
 // 3) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta e a escolha da condição de pagamento. 
