@@ -1,4 +1,5 @@
-// 1) Faça um algorítimo que dado as 3 notas tiradas por um aluno em um semestre da faculdade calcule e imprima a sua média e a sua classificação conforme a tabela abaixo.
+// 1) Faça um algorítimo que dado as 3 notas tiradas por um aluno em um semestre da 
+// faculdade calcule e imprima a sua média e a sua classificação conforme a tabela abaixo.
 
 // Média = (nota 1 + nota 2 + nota 3) / 3;
 
@@ -7,6 +8,24 @@
 // - Média entre 5 e 7, recuperação;
 // - Média acima de 7, passou de semestre;
 
+const portugues = 5;
+const matematica = 5;
+const fisica = 25;
+
+const mediaClassificaçao = (nota1, nota2, nota3) => {
+  let media = (nota1 + nota2 + nota3) / 3;
+
+  if (media < 5) {
+    console.log(`Sua média foi ${media} e sua classificação é REPROVAÇÃO`);
+  } else if (media >= 5 && media <= 7) {
+    console.log(`Sua média foi ${media} e sua classificação é RECUPERAÇÃO`);
+  } else {
+    console.log(`Sua média foi ${media.toFixed(2)} e sua classificação é PASSOU DE SEMESTRE`);
+  }
+};
+
+
+mediaClassificaçao(portugues, matematica, fisica);
 
 // 2) O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar uma indicação sobre a condição de peso de uma pessoa adulta. 
 
