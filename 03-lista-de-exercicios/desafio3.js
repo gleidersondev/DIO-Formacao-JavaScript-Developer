@@ -46,7 +46,7 @@ mediaClassificaçao(portugues, matematica, fisica);
 const peso = 73
 const altura = 1.72;
 
-const condicao = (kg, al) => {
+const imc = (kg, al) => {
   const resultado = kg / (al * al);
 
   if (resultado < 18.5) {
@@ -62,15 +62,34 @@ const condicao = (kg, al) => {
   }
 };
 
-condicao(peso, altura);
+imc(peso, altura);
 
 
 
-// 3) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta e a escolha da condição de pagamento. 
-// Utilize os códigos da tabela a seguir para ler qual a condição de pagamento escolhida e efetuar o cálculo adequado.
+// 3) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando
+// o preço normal de etiqueta e a escolha da condição de pagamento. 
+// Utilize os códigos da tabela a seguir para ler qual a condição de pagamento escolhida
+// e efetuar o cálculo adequado.
 
 // Código Condição de pagamento:
 // - À vista Débito, recebe 10% de desconto;
 // - À vista no Dinheiro ou PIX, recebe 15% de desconto;
 // - Em duas vezes, preço normal de etiqueta sem juros;
 // - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
+
+const produto = 199.90;
+const descontoDebitoAvista = produto - (produto * 0.10);
+const descontoDinheiroOuPix = produto - (produto *0.15);
+const duasVezes = produto;
+const acimaDeDuasVezes = 0.10;
+const condicao = 'pix';
+
+
+const condicaoDePagamento = (preco, formaPagto) => {
+  if (formaPagto === 'a vista') {
+
+    
+  }
+
+
+}
