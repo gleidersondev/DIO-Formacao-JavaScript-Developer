@@ -77,19 +77,24 @@ imc(peso, altura);
 // - Em duas vezes, preço normal de etiqueta sem juros;
 // - Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
 
-const produto = 199.90;
-const descontoDebitoAvista = produto - (produto * 0.10);
-const descontoDinheiroOuPix = produto - (produto *0.15);
-const duasVezes = produto;
+const precoDoProduto = 199.90;
+const descontoDebitoAvista = 0.10;
+const descontoDinheiroOuPix = 0.15;
+const duasVezes = precoDoProduto;
 const acimaDeDuasVezes = 0.10;
-const condicao = 'pix';
+const condicao = 'dinheiro ou pix';
 
 
-const condicaoDePagamento = (preco, formaPagto) => {
+const condicaoDePagamento = (produto, formaPagto) => {
   if (formaPagto === 'a vista') {
-
-    
+    console.log(`Preço final do produto é ${produto - (produto * descontoDebitoAvista)}`);
+  } else if (formaPagto === 'dinheiro ou pix') {
+    console.log(`Preço final do produto é ${produto - (produto * descontoDinheiroOuPix)}`);
+  } else if (formaPagto === 'duasVezes') {
+    console.log(`Preço final do produto é ${produto}`);
+  } else {
+    console.log(`Preço final do produto é ${produto + (produto * acimaDeDuasVezes)}`);
   }
+};
 
-
-}
+condicaoDePagamento(precoDoProduto, condicao);
