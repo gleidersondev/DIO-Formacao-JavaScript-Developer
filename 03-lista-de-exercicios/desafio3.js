@@ -98,3 +98,4 @@ const condicaoDePagamento = (produto, formaPagto) => {
 };
 
 condicaoDePagamento(precoDoProduto, condicao);
+
